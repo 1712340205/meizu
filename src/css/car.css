@@ -1,0 +1,266 @@
+body{
+    background: #f4f4f4;
+}
+header{
+    position: relative;
+    width: 100%;
+    z-index: 998;
+    height: 80px;
+    background-color: #fff;
+    border-bottom: 1px solid #efefef;
+}
+header .header_m{
+   width: 81.6%;
+   height: 100%;
+   margin: auto;
+}
+header .header_m h1{
+    width:125px ;
+    height:24px ;
+    float: left;
+    margin-top: 26px;
+    background-image: url(../images/base.png);
+ }
+ header .header_m .xin{
+    float: left;
+    margin-left: 30px;
+    line-height: 80px;
+ }
+ header .header_m .xin span{
+    float: left;
+    font-size: 14px;
+    color: #999;
+ }
+ header .header_m .xin span:nth-child(1){
+    color: #333;
+ }
+ header .header_m .xin span:before{
+    content: '>';
+    margin: 0 10px;
+    color: #999;
+ }
+ header .header_m .xin span:nth-child(1):before{
+    content: '';
+ }
+ header .header_m ul{
+    float: right;
+    height: 40px;
+    font-size: 12px;
+    line-height: 40px;
+    margin-top: 20px;
+ }
+ header .header_m ul li{
+    float: left;
+    padding: 0 20px;
+ }
+ header .header_m ul li:nth-child(1){
+    font-size: 12px;
+    line-height: 40px;
+ }
+ header .header_m ul:last-child{
+    font-size: 12px;
+    line-height: 40px;
+ }
+ .name{
+    font-size: 12px;
+    color: #00c3f5;    
+}
+ main{
+     width: 81.6%;
+     margin: auto;
+ }
+ main .main_top{
+    height: 50px;
+    margin-top: 10px;
+    font-size: 12px;
+    background-color: #fff;
+    color: rgba(51,51,51,.4);
+    border-bottom: 1px solid #EFEFEF;
+}
+main .main_top tbody tr td:nth-child(1){
+    width: 550px;
+    text-align: left;
+    padding-left: 24px;
+}
+main .main_top tbody tr td{
+    width: 220px;
+    text-align: center;
+    color: #999999;
+}
+main ul{
+    margin-bottom: 10px;
+}
+main ul li{
+   width: 100%;
+}
+main ul li .ul_xin{
+    background-color: #fff;
+    color: rgba(51,51,51,.4);
+    border-bottom: 1px solid #EFEFEF;
+ }
+ main ul li .ul_xin tbody tr td:nth-child(1){
+    width: 550px;
+    text-align: left;
+    padding-left: 60px;
+}
+main ul li .ul_xin tbody tr td:nth-child(1) img{
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+main ul li .ul_xin tbody tr td:nth-child(1) .text{
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding-top: 30px;
+}
+main ul li .ul_xin tbody tr td:nth-child(1) .text h3{
+    font-size: 16px;
+    color: #262626;
+}
+main ul li .ul_xin tbody tr td:nth-child(1) .text p{
+    color: #8C8C8C;
+    margin-top: 4px;
+    font-size: 14px;
+}
+main ul li .ul_xin tbody tr td{
+    width: 220px;
+    text-align: center;
+    color: #999999;
+}
+main ul li .ul_xin tbody tr td .dian{
+    width: 85px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 2px!important;
+    border: 1px solid #EFEFEF;
+    background-color: #fff;
+}
+main ul li .ul_xin tbody tr td .dian span{
+    width: 24px;
+    color: #595959;
+    float: left;
+}
+main ul li .ul_xin tbody tr td .dian input{
+    float: left;
+    width: 35px;
+    line-height: 24px;
+    height: 100%;
+    text-align: center;
+    border-left: 1px solid #EFEFEF;
+    border-right: 1px solid #EFEFEF;
+}
+main .last{
+    width: 100%;
+   background: white;
+    font-size: 14px;
+    color: #666;
+    line-height: 67px;
+}
+main .last .last_l{
+    float: left;
+    margin-left: 24px;
+    height: 100%;
+    font-size: 14px;
+    color: #666;
+    line-height: 67px;
+}
+main .last .last_l em{
+    font-size: 16px;
+    color: black;
+    margin-right: 5px;
+}
+main .last .last_r{
+    float: right;
+    height: 100%;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #666;
+    line-height: 67px;
+}
+main .last .last_r span {
+    float: left;
+}
+
+main .last .last_r i{
+    color: #E02B41;
+}
+main .last .last_r s{
+    font-size: 20px;
+    font-weight: bolder;
+    color: #E02B41;
+    margin-right: 24px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+main .last .last_r s b{
+    font-size: 20px;
+    font-weight: bolder;
+    color: #E02B41;
+}
+main .last .last_r .guo{
+    width: 60px;
+    height: 30px;
+    color: #FFF;
+    background-color: #F66567!important;
+    border-radius: 2px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0 20px;
+    float: left;
+    margin-top: 16px;
+    /* box-sizing: border-box; */
+}
+
+.main1{
+    display: table;
+    height: 360px;
+    width: 81.6%;
+    margin: 10px auto;
+    background-color: #fff;
+    display: none;
+}
+.main1 .main1_d{
+    width: 35%;
+    margin: auto;
+    box-sizing: border-box;
+    padding-top: 120px;
+}
+.main1 .main1_d .d_l{
+    display: inline-block;
+    vertical-align: middle;
+    width: 102px;
+    height: 133px;
+    background-image: url(https://store.res.meizu.com/order/img/notFound-804fc26175.png);
+    margin-right: 30px;
+}
+.main1 .main1_d .d_r{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    color: #666;
+}
+.main1 .main1_d .d_r h4{
+    font-size: 18px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+}
+.main1 .main1_d .d_r p{
+    margin-bottom: 20px;
+    text-align: left;
+    color: #666;
+}
+.main1 .main1_d .d_r a{
+    width: 130px;
+    height: 36px;
+    line-height: 36px;
+    color: #FFF;
+    border-color: #00c3f5;
+    background-color: #00c3f5;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}

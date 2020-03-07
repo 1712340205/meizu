@@ -5,10 +5,213 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 
 <body>
+    <header>
+        <nav><i></i></nav>
+    </header>
+    <main>
+        <!-- 登录 -->
+        <section class="box">
+            <i class="qie"></i>
+            <i class="qie2"></i>
+            <article class="pc">
+                <h3>验证码登录</h3>
+                <article class="yan">
+                    <span>
+                        <input readonly="" value="+86">
+                        <i></i>
+                    </span>
+                    <input class="in" maxlength="20" placeholder="手机号码" autocomplete="off" tabindex="2">
+                </article>
+                <a class="deng">登录</a>
+                <p><span id="ce">注册</span><a href="">忘记密码？</a></p>
+            </article>
+            <article class="ph">
+                <ul>
+                    <li class="active">账号登录</li>
+                    <li>扫码登录</li>
+                </ul>
+                <div class="main1">
+                    <article class="user">
+                        <input type="text" id="username" placeholder="手机号/Flyme账号">
+                    </article>
+                    <article class="pass">
+                        <input type="password" id="password" placeholder="密码">
+                    </article>
+                    <input type="checkbox" class="fu"><label for="ji" style="font-size: 12px;">记住密码</label><br>
+                    <button class="setin">登录</button>
+                    <p><span id="ce2">注册</span><a href="">忘记密码？</a></p>
 
+                </div>
+                <div class="main2">
+                    <img src="../images/mzQrShow.jpg" alt="">
+                    <p>请使用账号中心右上角或最新的Flyme系统相机扫码功能，扫码登录</p>
+                </div>
+            </article>
+        </section>
+        <!-- 注册 -->
+        <section class="box2">
+            <h3>注册Flyme账号</h3>
+            <article class="user">
+                <input type="text" id="username1" placeholder="手机号/Flyme账号">
+            </article>
+            <article class="pass">
+                <input type="password" id="password1" placeholder="密码">
+            </article>
+            <span><i></i>注册账号即表示您同意并愿意遵守<a>Flyme账号服务协议</a>、
+                <a href="">法律声明</a>和<a href="">隐私政策</a></span>
+            <button class="setup">立即注册</button>
+            <p><span id="lu">登录</span></p>
+        </section>
+    </main>
+    <footer>
+        <article class="footer_top">
+            <span>
+                <a href="">关于魅族</a>
+                <a href="">工作机会</a>
+                <a href="">联系我们</a>
+                <a href="">法律声明</a>
+                <a href="">常见问题</a>
+                <a href="">简体中文</a>
+            </span>
+            <em>
+                <s>客服热线</s>
+                <s>400-788-3333</s>
+                <s>在线客服</s>
+            </em>
+            <i>
+                <b></b>
+                <b></b>
+                <b></b>
+            </i>
+        </article>
+        <article class="footer_bottom">
+            <em>©2020 Meizu Telecom Equipment Co., Ltd. All rights reserved.</em>
+            <a>备案号: 粤ICP备13003602号-4</a>
+            <a>经营许可证编号: 粤B2-20130198</a>
+            <a>营业执照</a>
+            <span><i></i>粤公网安备 44049102496076号</span>
+        </article>
+    </footer>
+
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../lib/jquery-validate/jquery.validate.min.js"></script>
+    <script src="../lib/jquery-validate/localization/messages_zh.min.js"></script>
+
+    <script>
+
+        $('ul>li').click(function () {
+            if ($(this).index() === 0) {
+                $('.main2').hide().prev().show()
+                $(this).addClass('active').siblings().removeClass('active')
+            }
+            else {
+                $('.main1').hide().next().show()
+                $(this).addClass('active').siblings().removeClass('active')
+            }
+        })
+
+        // $('#login').validate({
+
+        //     rules: {
+        //         username: 'required',
+        //         password: {
+        //             required: true,
+        //             minlength: 6,
+        //             maxlength: 11,
+        //         }
+        //     },
+
+        //     massagea: {
+        //         username: '用户名不能为空',
+        //         password: {
+        //             required: true,
+        //             minlength: '密码不能少于6位数'
+        //         }
+        //     },
+
+        //     submitHandler: function (form) {
+        //         $.post('./login.php', $(form).serialize(), res => {
+        //             console.log(res)
+        //         }, 'json')
+        //     }
+        // })
+
+        let user = document.querySelector("#username")
+        let pass = document.querySelector("#password")
+        $('.setin').click(() => {
+            console.log(user.value)
+            console.log(pass.value)
+            $.ajax({
+                url: '/login',
+                type: 'post',
+                data: {
+                    username: user.value,
+                    password: pass.value
+                },
+                // dataType: 'json',
+                success: function (res) {
+                    console.log(res)
+                    if (res == 1) {
+                        // 设置一个会话级别cookie
+                        document.cookie = `user=${user.value}`
+                        window.location.href = "./index.html";
+                    }
+
+                }
+            })
+        })
+        let user1 = document.querySelector("#username1")
+        let pass1 = document.querySelector("#password1")
+        $('.setup').click(() => {
+            console.log(user1.value)
+            console.log(pass1.value)
+            $.ajax({
+                url: '/reg',
+                type: 'post',
+                data: {
+                    username: user1.value,
+                    password: pass1.value
+                },
+                // dataType: 'json',
+                success: function (res) {
+                    console.log(res)
+                    if (res == 1) {
+                        window.location.href = "./login.html";
+                    }
+
+                }
+            })
+        })
+
+
+        $('.qie').click(function () {
+            $(this).toggle().next().toggle()
+            $('.pc').toggle().next().toggle()
+        })
+        $('.qie2').click(function () {
+            $(this).toggle().prev().toggle()
+            $('.ph').toggle().prev().toggle()
+        })
+
+        // 切换注册登录
+        $('#ce').click(() => {
+            $('.box').hide()
+            $('.box2').show()
+        })
+        $('#ce2').click(() => {
+            $('.box').hide()
+            $('.box2').show()
+        })
+        $('#lu').click(() => {
+            $('.box2').hide()
+            $('.box').show()
+        })
+    </script>
 </body>
 
 </html>

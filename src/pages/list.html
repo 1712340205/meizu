@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/list.css">
+    <!-- <link rel="stylesheet" href="../lib/pagination/pagination.css"> -->
+</head>
+
+<body>
+    <header>
+        <nav>
+            <article class="nav_top">
+                <h1></h1>
+                <article class="nav_right">
+                    <section class="right_inp">
+                        <input type="text" placeholder="魅族 16T">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </section>
+                    <span class="xiang" id="du">
+                        <img src="../images/heiren.png" alt="">
+                        <ul class="dl">
+                            <li><a href="./login.html">立即登录</a></li>
+                            <li><a href="./login.html">立即注册</a></li>
+                        </ul>
+                    </span>
+                    <span class="xiang cs" id="gw"><img src="../images/heic.png" alt=""><em class="shu">0</em></span>
+                </article>
+                <ul>
+                    <li class="xian"><a href="">手机</a></li>
+                    <li class="xian"><a href="">声学</a></li>
+                    <li class="xian"><a href="">配件</a></li>
+                    <li class="xian"><a href="">生活</a></li>
+                    <li><a href="">Flyme</a></li>
+                    <li><a href="">服务</a></li>
+                    <li><a href="">专卖店</a></li>
+                    <li><a href="">社区</a></li>
+                    <li class="xian"><a href="">APP下载</a></li>
+                </ul>
+
+            </article>
+        </nav>
+        <article class="lie">
+            <ul></ul>
+        </article>
+    </header>
+    <section class="banner"></section>
+    <main class="clearfix">
+        <h2>
+            <span>手机</span>
+            <article class="title_r">
+                <a href="">价格</a>
+                <a href="">新品</a>
+                <a href="">推荐</a>
+            </article>
+        </h2>
+        <section class="list">
+            <ul>
+                <li>
+                    <span class="hong">热卖</span>
+                    <img src="https://openfile.meizu.com/group1/M00/07/02/Cgbj0Fx_ZKSATnTJAAU3Ca8M6D8964.png" alt="">
+                    <h4>魅族 Note9</h4>
+                    <p>骁龙 6775 | 后置 4800 万</p>
+                    <em>￥788</em>
+                </li>
+            </ul>
+        </section>
+        <section class="pagi m-style"></section>
+    </main>
+    <footer>
+        <article class="footer_m">
+            <article class="footer_top">
+                <ul>
+                    <li>
+                        <img src="../images/f1.png" alt="">
+                        <span>满80免运费</span>
+                    </li>
+                    <li>
+                        <img src="../images/f2.png" alt="">
+                        100+ 城市次日送达<span>满80免运费</span>
+                    </li>
+                    <li>
+                        <img src="../images/f3.png" alt="">
+                        <span>7天无理由退货</span>
+                    </li>
+                    <li>
+                        <img src="../images/f4.png" alt="">
+                        <span>15天换货保障</span>
+                    </li>
+                    <li>
+                        <img src="../images/f5.png" alt="">
+                        <span>1年免费保修</span>
+                    </li>
+                    <li>
+                        <img src="../images/f6.png" alt="">
+                        <span>上门快修</span>
+                    </li>
+                </ul>
+                <article class="footer_right">
+                    <span>周一至周日 8:00-20:00</span>
+                    <p>400-788-3333</p>
+                    <a href="">在线客服</a>
+                </article>
+            </article>
+            <ul class="ul">
+                <li><a href="">了解魅族</a></li>
+                <li><a href="">加入我们</a></li>
+                <li><a href="">联系我们</a></li>
+                <li><a href="">Flyme</a></li>
+                <li><a href="">魅族社区</a></li>
+                <li><a href="">天猫旗舰店</a></li>
+                <li><a href="">问题反馈</a></li>
+                <li><a href="">线上销售授权名单公示</a></li>
+                <li><a href="">出版物经营许可证</a></li>
+                <li><i></i><a href="">简体中文</a></li>
+            </ul>
+            <article class="zi">
+                ©2019 Meizu Telecom Equipment Co., Ltd. All rights reserved.&nbsp;&nbsp;&nbsp;&nbsp;
+                <a>粤ICP备13003602号</a>
+                <a>合字B2-20170010 </a>
+                <a>营业执照</a>
+                <a>法律声明</a>
+                <span><i><img src="../images/jing.png" alt=""></i>粤公网安备 44049102496009 号</span>
+                <span><img src="../images/dun.png" alt=""></span>
+                <span><img src="../images/bei.png" alt=""></span>
+                <span><img src="../images/xin.png" alt=""></span>
+            </article>
+            <article class="wei">
+                <a href=""><img src="../images/lian.png" alt=""></a>
+                <a href=""><img src="../images/wei.png" alt=""></a>
+                <a href=""><img src="../images/qk.png" alt=""></a>
+                <a href=""><img src="../images/bo.png" alt=""></a>
+            </article>
+        </article>
+    </footer>
+
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../lib/pagination/pagination.js"></script>
+
+    <script>
+
+        // 获取cookie,如果已登录，就显示用户名
+        function getCookie(key) {
+            str = ''
+            var tmp = document.cookie.split('; ')
+            // 循环遍历
+            for (var i = 0; i < tmp.length; i++) {
+
+                var t = tmp[i].split('=')
+                if (t[0] === key) {
+                    str = t[1]
+                }
+            }
+
+            return str
+        }
+        var res = getCookie('user')
+        if (res) {
+            $('#du').text(res)
+        }
+
+        // 判断购物车是否有数据
+        const cartList = JSON.parse(localStorage.getItem('cartList'))
+        if (cartList) {
+            $('.shu').text(cartList.length)
+        }
+
+        // 跳转购物车
+        $('#gw').children().click(() => {
+            window.location.href = './cart.html'
+        })
+
+
+        let currPage = 1
+        let flag = true
+        let list = []
+
+        getSequ()
+        function getSequ() {
+            $.ajax({
+                url: '../lib/index.json',
+                dataType: 'json',
+                success: function (res) {
+                    console.log(res)
+
+                    let ha = ''
+                    // 渲染二级菜单
+                    res.hua.forEach(item => {
+                        ha += `<li>${item.name}</li>`
+                    })
+                    $('.nav_top > ul')
+                        .html(ha)
+                        .on({
+                            mouseenter: () => $('.lie').stop().slideDown(),
+                            mouseleave: () => $('.lie').stop().slideUp()
+                        })
+                        .children('li')
+                        .on('mouseover', function () {
+                            const index = $(this).index()
+                            const list = res.hua[index].list
+
+                            let hu = ''
+                            list.forEach(item => {
+                                hu += `
+                            <li>
+                                <img src="${item.url}" alt="">
+                                <p>${item.title}</p>
+                                <span>${item.jie}</span>
+                            </li>
+                            `
+                            })
+                            $('.lie > ul').html(hu)
+                        })
+
+                    $('.lie').on({
+                        mouseover: function () { $(this).finish().show() },
+                        mouseout: function () { $(this).finish().slideUp() }
+                    })
+                    bindHtml(res.xuan)
+                    // flag && bindPagi(res.ye.fen)
+                    console.log(res.ye)
+                    list = res.xuan
+
+
+                }
+            })
+        }
+
+        function bindHtml(list) {
+            let str1 = ''
+            list.forEach(item => {
+                let xn = ''
+                // 判断xin是否存在
+                if (item.xin) {
+                    xn = `<span class="hong">${item.xin}</span>`
+                }
+                str1 += `
+                <li data-id="${item.id}">
+                    ${xn}
+                    <img src="${item.img}" alt="">
+                    <h4>${item.title}</h4>
+                    <p>${item.jie}</p>
+                    <em>${item.price}</em>
+                </li>
+                `
+            })
+
+            $('.list > ul').html(str1)
+
+
+            $('.list > ul').on('click', 'li', function () {
+
+                const id = $(this).data('id')
+
+
+                let data = null
+                for (let i = 0; i < list.length; i++) {
+                    if (list[i].id == id) {
+                        data = list[i]
+                        break
+                    }
+                }
+
+                localStorage.setItem('goodsInfo', JSON.stringify(data))
+
+                // 4. 跳转页面
+                window.location.href = './xiang.html'
+            })
+        }
+
+
+
+    </script>
+</body>
+
+</html>

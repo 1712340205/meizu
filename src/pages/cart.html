@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/car.css">
+</head>
+
+<body>
+    <header>
+        <section class="header_m">
+            <h1></h1>
+            <article class="xin">
+                <span>购物车</span>
+                <span>确认订单</span>
+                <span>在线支付</span>
+                <span>完成</span>
+            </article>
+            <ul>
+                <li><a href="">我的订单</a></li>
+                <li></li>
+                <li></li>
+                <li>用户<i class="name"></i>的商城</li>
+            </ul>
+        </section>
+    </header>
+    <main>
+        <table class="main_top">
+            <tbody>
+                <tr>
+                    <td><input type="checkbox">全选</td>
+                    <td>单价(元)</td>
+                    <td>数量</td>
+                    <td>小计(元)</td>
+                    <td style="color: #00c3f5;">编辑</td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+
+        </ul>
+        <article class="last clearfix">
+            <section class="last_l">
+                <input type="checkbox"><em>全选</em>
+                <span>删除选中的商品</span>
+                <i>共<s>1</s>件商品，已选择<b>1</b>件</i>
+            </section>
+            <section class="last_r">
+                <span>已优惠<i>0.00</i>元，合计(不含运费):<s>￥<b>2452.00</b></s> </span>
+                <article class="guo">去结算</article>
+            </section>
+        </article>
+    </main>
+    <section class="main1">
+        <article class="main1_d">
+            <article class="d_l"></article>
+            <article class="d_r">
+                <h4>您还没有登录！</h4>
+                <p>登录后可显示您账号中已加入的商品哦~</p>
+                <a href="./login.html">去登陆</a>
+            </article>
+        </article>
+    </section>
+
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+    <script>
+
+
+        // 获取数据
+        const cartList = JSON.parse(localStorage.getItem('cartList'))
+
+        if (cartList) {
+            bindHtml()
+            bindEvent()
+        }
+
+        function bindHtml() {
+            let str = ''
+
+            cartList.forEach(item => {
+                str += `
+                <li>
+                    <table class="ul_xin">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                    <img src="${item.img}" alt="">
+                                    <article class="text">
+                                        <h3>${item.title}</h3>
+                                        <p>${item.jie}</p>
+                                    </article>
+                                </td>
+                                <td>${item.price}</td>
+                                <td>
+                                    <article class="dian">
+                                        <span class="jian" data-id=${ item.id}>-</span>
+                                        <input type="text" value="${item.number}">
+                                        <span class="jia" data-id=${ item.id}>+</span>
+                                    </article>
+                                </td>
+                                <td style="color: red;">${item.xiaoji}</td>
+                                <td>--</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                `
+            })
+            $('main ul').html(str)
+
+        }
+
+        function bindEvent() {
+
+            // 减
+            $('main > ul').on('click', '.jian', function () {
+
+                const id = $(this).data('id')
+
+
+                cartList.forEach(item => {
+                    if (item.id === id) {
+                        item.number > 1 ? item.number-- : ''
+                        item.xiaoji = item.price * item.number
+
+                    }
+                })
+
+                bindHtml()
+                localStorage.setItem('cartList', JSON.stringify(cartList))
+            })
+
+            // 加
+            $('main > ul').on('click', '.jia', function () {
+                const id = $(this).data('id')
+
+                cartList.forEach(item => {
+                    if (item.id === id) {
+                        item.number++
+                        item.xiaoji = item.number * item.price
+
+                    }
+                })
+
+                bindHtml()
+                localStorage.setItem('cartList', JSON.stringify(cartList))
+            })
+
+
+        }
+
+        // 获取cookie,判断是否已登陆，若无登录，无数据
+        function getCookie(key) {
+            str = ''
+            var tmp = document.cookie.split('; ')
+            // 循环遍历
+            for (var i = 0; i < tmp.length; i++) {
+
+                var t = tmp[i].split('=')
+                if (t[0] === key) {
+                    str = t[1]
+                }
+            }
+            return str
+        }
+        var res = getCookie('user')
+        if (!res) {
+            $('main').hide()
+            $('.main1').show()
+        } else {
+            $('.header_m').children('ul').find('li').eq(3).children('i').text(res)
+        }
+
+    </script>
+</body>
+
+</html>

@@ -6,6 +6,45 @@ header{
     height: 670px;
     position: relative;
 }
+.lie{
+    width: 100%;
+    height: 300px;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    box-sizing: border-box;
+    padding-top: 80px;
+    display: none;
+}
+.lie ul{
+    display: block;
+    width: 1200px;
+    height: 200px;
+    /* background: yellow; */
+    margin: auto;
+    
+}
+.lie ul li{
+    float: left;
+    width: 120px;
+    margin: 0 1%;
+}
+.lie ul li img{
+    width: 120px;
+    height: 120px;
+}
+.lie ul li p{
+   font-size: 12px;
+   color: #999;
+   text-align: center;
+}.lie ul li span{
+    display: block;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+}
 .swiper-wrapper .swiper-slide{
     height: 670px;
     position: relative;
@@ -25,6 +64,7 @@ nav{
     height: 80px;
     top: 0;
     z-index: 999;
+    
 }
 nav .nav_top{
     width: 81.6%;
@@ -49,11 +89,11 @@ nav .nav_top ul li{
     float: left;
     line-height: 55px;
 }
-nav .nav_top ul li a{
+nav .nav_top ul li{
     font-size: 14px;
     color: white;
 }
-nav .nav_top ul li a:hover{
+nav .nav_top ul li:hover{
     color: #00b9f2;
 }
 .nav_right{
@@ -100,6 +140,37 @@ input{
     display: inline-block;
     padding: 0 4px;
     text-indent: 0;
+}
+#du{
+    color: #00b9f2;
+    font-weight: bold;
+    font-size: 14px;
+}
+#du:hover .dl{
+    display: block;
+}
+.xiang .dl{
+    position: absolute;
+    bottom: -50px;
+    left: -30px;
+    width: 94px;
+    height: 50px;
+    background: white;
+    border-radius: 5px;
+    display: none;
+}
+.xiang .dl li{
+    width:100% ;
+    height: 14px;
+    line-height: 14px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 7px;
+}
+.xiang .dl li:hover a{
+  color: #00b9f2;
 }
 /* 第一*/
 .main_one{
@@ -161,7 +232,12 @@ input{
     margin: auto;
     margin-top: 10px;
 }
-.main_tow .tow_list .list_d{
+.main_tow .tow_list .tow_top{
+    width: 100%;
+    height: 610px;
+    background: #f4f4f4;
+}
+.main_tow .tow_list .tow_top .list_d{
     width: 49.5%;
     height: 610px;
     box-sizing: border-box;
@@ -170,7 +246,7 @@ input{
     position: relative;
     padding-top: 56px;
 }
-.main_tow .tow_list .list_d .hong{
+.main_tow .tow_list .tow_top .list_d .hong{
     position: absolute;
     top: 30px;
     left: 30px;
@@ -202,13 +278,13 @@ input{
     text-align: center;
     color: #c00;
 }
-.main_tow .tow_list .list_d img{
+.main_tow .tow_list .tow_top .list_d img{
    width: 460px;
    height: 460px;
    margin: auto;
    border: 0;
 }
-.main_tow .tow_list .list_d:nth-child(2){
+.main_tow .tow_list .tow_top .list_d:nth-child(2){
     float: right;
 }
 /* 第二小 */
@@ -285,25 +361,29 @@ input{
    width: 100%;
    height: 100%;
 }
-.main_three ul{
+.main_three .three_st{
     width: 81.6%;
     margin: auto;
 }
-.main_three ul li{
-    width: 24.25%;
+.main_three .three_r{
+    width: 74.75%;
+    float: left;
+}
+.main_three .three_r li{
+    width: 32.334%;
     height: 375px;
     margin-top: 10px;
     float: left;
-    margin-right: 1%;
+    margin-right: 1.5%;
     background: white;
     position: relative;
     box-sizing: border-box;
     padding-top: 30px;
 }
-.main_three ul li:nth-child(4n){
+.main_three .three_r li:nth-child(3n){
    margin-right: 0;
 }
-.main_three ul li span{
+.main_three .three_r li span{
     position: absolute;
     top: 30px;
     left: 30px;
@@ -317,44 +397,52 @@ input{
     border-radius: 50%;
     background: #ff3149;
 }
-.main_three ul li img{
+.main_three .three_r li img{
    width: 230px;
    height: 230px;
    margin: auto;
    margin-bottom: 10px;
 }
-.main_three ul li h4{
+.main_three .three_r li h4{
     color: #333;
     font-size: 16px;
     margin-bottom: 2px;
     text-align: center;
  }
-.main_three ul li p{
+.main_three .three_r li p{
     color: #999;
     font-size: 14px;
     text-align: center;
  }
-.main_three ul li em{
+.main_three .three_r li em{
     display: block;
     width: 100%;
     font-size:22px;
     text-align: center;
     color: #c00;
  }
- .main_three ul .li{
+.main_three .three_st .three_l{
+    width: 24.25%;
+    float: left;
+    margin-right: 1%;
+}
+ .main_three .three_l li{
+     width: 100%;
+     height: 375px;
+     margin-top: 10px;
     padding-top: 0;
     position: relative;
  }
- .main_three ul .li img{
+ .main_three .three_l li img{
     width: 100%;
     height: 100%;
  }
- .main_three ul .li .shang{
+ .main_three .three_l li .shang{
     width: 100%;
     position: absolute;
     bottom: 20px;
  }
- .main_three ul .li .shang h4{
+ .main_three .three_l li .shang h4{
     width: 100%;
     text-align: center;
     color: #fff;
@@ -362,11 +450,11 @@ input{
     font-weight: 700;
     margin-bottom: 5px;
  }
- .main_three ul .li .shang p{
+ .main_three .three_l li .shang p{
     color: white;
     font-size: 14px;
  }
- .main_three ul .li .shang i{
+ .main_three .three_l li .shang i{
     display: inline-block;
     width: 100%;
     font-size: 24px;
@@ -374,7 +462,7 @@ input{
     color: #ebce6b;
     text-align: center;
  }
- .main_three ul .li .shang i s{
+ .main_three .three_l li .shang i s{
      display: inline-block;
     text-decoration: line-through;
     color: white;
@@ -401,25 +489,29 @@ input{
   width: 100%;
   height: 100%;
 }
-.main_four ul{
+.main_four .four_st{
     width: 81.6%;
     margin: auto;
 }
-.main_four ul li{
-    width: 24.25%;
+.main_four .four_r{
+    width: 74.75%;
+    float: left;
+}
+.main_four .four_r li{
+    width: 32.334%;
     height: 375px;
     margin-top: 10px;
     float: left;
-    margin-right: 1%;
+    margin-right: 1.5%;
     background: white;
     position: relative;
     box-sizing: border-box;
     padding-top: 30px;
 }
-.main_four ul li:nth-child(4n){
+.main_four .four_r li:nth-child(3n){
    margin-right: 0;
 }
-.main_four ul li span{
+.main_four .four_r li span{
     position: absolute;
     top: 30px;
     left: 30px;
@@ -433,44 +525,52 @@ input{
     border-radius: 50%;
     background-image: linear-gradient(120deg,#ff910e,#ffd037);
 }
-.main_four ul li img{
+.main_four .four_r li img{
    width: 230px;
    height: 230px;
    margin: auto;
    margin-bottom: 10px;
 }
-.main_four ul li h4{
+.main_four .four_r li h4{
     color: #333;
     font-size: 16px;
     margin-bottom: 2px;
     text-align: center;
  }
-.main_four ul li p{
+.main_four .four_r li p{
     color: #999;
     font-size: 14px;
     text-align: center;
  }
-.main_four ul li em{
+.main_four .four_r li em{
     display: block;
     width: 100%;
     font-size:22px;
     text-align: center;
     color: #c00;
  }
- .main_four ul .li{
+.main_four .four_st .four_l{
+    width: 24.25%;
+    float: left;
+    margin-right: 1%;
+}
+ .main_four .four_l li{
+     width: 100%;
+     height: 375px;
+     margin-top: 10px;
     padding-top: 0;
     position: relative;
  }
- .main_four ul .li img{
+ .main_four .four_l li img{
     width: 100%;
     height: 100%;
  }
- .main_four ul .li .shang{
+ .main_four .four_l li .shang{
     width: 100%;
     position: absolute;
     bottom: 20px;
  }
- .main_four ul .li .shang h4{
+ .main_four .four_l li .shang h4{
     width: 100%;
     text-align: center;
     color: #fff;
@@ -478,11 +578,11 @@ input{
     font-weight: 700;
     margin-bottom: 5px;
  }
- .main_four ul .li .shang p{
+ .main_four .four_l li .shang p{
     color: white;
     font-size: 14px;
  }
- .main_four ul .li .shang i{
+ .main_four .four_l li .shang i{
     display: inline-block;
     width: 100%;
     font-size: 24px;
@@ -490,7 +590,7 @@ input{
     color: #47B4E1;
     text-align: center;
  }
- .main_four ul .li .shang i s{
+ .main_four .four_l li .shang i s{
      display: inline-block;
     text-decoration: line-through;
     color: white;
@@ -517,25 +617,29 @@ input{
   width: 100%;
   height: 100%;
 }
-.main_five ul{
+.main_five .five_st{
     width: 81.6%;
     margin: auto;
 }
-.main_five ul li{
-    width: 24.25%;
+.main_five .five_r{
+    width: 74.75%;
+    float: left;
+}
+.main_five .five_r li{
+    width: 32.334%;
     height: 375px;
     margin-top: 10px;
     float: left;
-    margin-right: 1%;
+    margin-right: 1.5%;
     background: white;
     position: relative;
     box-sizing: border-box;
     padding-top: 30px;
 }
-.main_five ul li:nth-child(4n){
+.main_five .five_r li:nth-child(3n){
    margin-right: 0;
 }
-.main_five ul li span{
+.main_five .five_r li span{
     position: absolute;
     top: 30px;
     left: 30px;
@@ -549,44 +653,52 @@ input{
     border-radius: 50%;
     background: #ff3149;
 }
-.main_five ul li img{
+.main_five .five_r li img{
    width: 230px;
    height: 230px;
    margin: auto;
    margin-bottom: 10px;
 }
-.main_five ul li h4{
+.main_five .five_r li h4{
     color: #333;
     font-size: 16px;
     margin-bottom: 2px;
     text-align: center;
  }
-.main_five ul li p{
+.main_five .five_r li p{
     color: #999;
     font-size: 14px;
     text-align: center;
  }
-.main_five ul li em{
+.main_five .five_r li em{
     display: block;
     width: 100%;
     font-size:22px;
     text-align: center;
     color: #c00;
  }
- .main_five ul .li{
+.main_five .five_st .five_l{
+    width: 24.25%;
+    float: left;
+    margin-right: 1%;
+}
+ .main_five .five_l li{
+     width: 100%;
+     height: 375px;
+     margin-top: 10px;
     padding-top: 0;
     position: relative;
  }
- .main_five ul .li img{
+ .main_five .five_l li img{
     width: 100%;
     height: 100%;
  }
- .main_five ul .li .shang{
+ .main_five .five_l li .shang{
     width: 100%;
     position: absolute;
     bottom: 20px;
  }
- .main_five ul .li .shang h4{
+ .main_five .five_l li .shang h4{
     width: 100%;
     text-align: center;
     color: #fff;
@@ -594,11 +706,11 @@ input{
     font-weight: 700;
     margin-bottom: 5px;
  }
- .main_five ul .li .shang p{
+ .main_five .five_l li .shang p{
     color: white;
     font-size: 14px;
  }
- .main_five ul .li .shang i{
+ .main_five .five_l li .shang i{
     display: inline-block;
     width: 100%;
     font-size: 24px;
@@ -606,7 +718,7 @@ input{
     color: #ebce6b;
     text-align: center;
  }
- .main_five ul .li .shang i s{
+ .main_five .five_l li .shang i s{
      display: inline-block;
     text-decoration: line-through;
     color: white;
@@ -787,7 +899,7 @@ footer .footer_m .footer_top{
     width: 100%;
     height: 130px;
     border-bottom: 1px solid #eee;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 footer .footer_m .footer_top ul{
     float: left;
@@ -798,7 +910,7 @@ footer .footer_m .footer_top ul li{
     float: left;
     color: #999;
     font-size: 12px;
-    margin-top: 30px;
+    margin-top: 40px;
     margin-right: 3%;
 }
 footer .footer_m .footer_top ul li
@@ -856,10 +968,10 @@ a{
     display: block;
     float: right;
 }
-footer .footer_m ul{
+footer .footer_m .ul{
     height: 30px;
 }
-footer .footer_m ul li{
+footer .footer_m .ul li{
     padding-right: 15px;
     border-right: 1px solid #d6d6d6;
     float: left;
@@ -867,6 +979,16 @@ footer .footer_m ul li{
     margin-right: 15px;
     font-size: 12px;
     color: #999;
+}
+footer .footer_m .ul li i{
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+    background-image: url(../images/gj.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 3px;
 }
 footer .footer_m ul li a{
     font-size: 12px;
@@ -878,11 +1000,28 @@ footer .footer_m ul li a:hover{
 footer .footer_m .zi{
     font-size: 12px;
     color: #999;
+    float: left;
 }
-footer .footer_m .zi a{
+footer .footer_m .zi a,span{
     font-size: 12px;
     color: #999;
 }
 footer .footer_m .zi a:hover{
    color: #47B4E1;
 }
+footer .footer_m .zi span img{
+   display: inline-block;
+   margin: 0 3px;
+}
+footer .footer_m .wei{
+    float: right;
+ }
+footer .footer_m .wei a{
+    display: inline-block;
+    border-right: 1px solid #ccc;
+ }
+ footer .footer_m .wei a img{
+    width: 18px;
+    height: 18px;
+    margin: 0 7px;
+ }
